@@ -1,30 +1,30 @@
 export default {
   colors: {
-    header: '#1B1B1F',
+    header: '#EB5757',
 
-    background_primary: '#F4F5F6',
-    background_secondary: '#FFFFFF',
+    background_primary: '#FFFFFF',
+    background_secondary: '#F2F2F2',
 
-    text: '#7A7A80',
+    text: '#232323',
+    text_dark: '#000000',
     text_detail: '#AEAEB3',
-    tittle: '#47474D',
+    tittle: '#232323',
 
-    line: '#EBEBF0',
+    line: '#F2F2F2',
 
-    main: '#DC1637',
-    main_light: '#FDEDEF',
-    success: '#03B252',
+    main: '#CC0000',
+    success: '#21B121',
+    success_light: '#33CC33',
+    
+    gold_member: '#C3AC58',
 
-    shape: '#E1E1E8',
-    shape_dark: '#29292E'
+    star: '#F1D903',
   },
 
   fonts: {
-    primary_400: 'Inter_400Regular',
-    primary_500: 'Inter_500Medium',
-
-    secondary_400: 'Archivo_400Regular',
-    secondary_500: 'Archivo_500Medium',
-    secondary_600: 'Archivo_600SemiBold'
+    primary_400: 'Montserrat_400Regular',
+    primary_500: 'Montserrat_500Medium',
+    primary_600: 'Montserrat_600SemiBold',
+    primary_700: 'Montserrat_700Bold'
   }
 }

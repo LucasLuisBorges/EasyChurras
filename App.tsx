@@ -2,10 +2,11 @@ import React from 'react';
 
 import {
   useFonts,
-} from ''
-import {
-  
-} from ''
+  Montserrat_400Regular,
+  Montserrat_500Medium,
+  Montserrat_600SemiBold,
+  Montserrat_700Bold
+} from '@expo-google-fonts/montserrat'
 
 import AppLoading from 'expo-app-loading';
 import theme from './src/styles/theme';
@@ -14,7 +15,10 @@ import { Home } from './src/screens/Home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    
+    Montserrat_400Regular,
+    Montserrat_500Medium,
+    Montserrat_600SemiBold,
+    Montserrat_700Bold
   });
 
   if(!fontsLoaded) {
