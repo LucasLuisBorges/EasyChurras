@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const Wrapper = styled.View`
   background-color: ${({ theme }) => theme.colors.background_primary};
@@ -9,5 +10,6 @@ export const Wrapper = styled.View`
 
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.text};
-  font-size: 32px;
+  font-family: ${({ theme }) => theme.fonts.primary_400};
+  font-size: ${RFValue(32)}px;
 `;

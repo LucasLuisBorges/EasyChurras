@@ -1,13 +1,14 @@
-import React from "react";
-import { 
-  Title,
-  Wrapper
-} from "./styles";
+import React from 'react';
 
-export const Home: React.FC = () => {
+import {
+  Wrapper,
+  Title
+} from './styles';
+
+export function Home(){
   return (
     <Wrapper>
       <Title>Hello word</Title>
     </Wrapper>
   );
-};
+}
