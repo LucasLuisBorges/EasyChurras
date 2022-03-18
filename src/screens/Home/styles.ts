@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
-  flex: 1;
+  width: 100%;
 
   background-color: ${({ theme }) => theme.colors.background_primary};
 `;
@@ -30,9 +30,41 @@ export const SearchInput = styled.TextInput`
   margin-bottom: 46px;
 `;
 
-export const Title = styled.Text`
+export const TitleHeader = styled.Text`
   color: ${({ theme }) => theme.colors.text_light};
   font-family: ${({ theme }) => theme.fonts.primary_600};
   font-size: ${RFValue(26)}px;
   line-height: 32px;
+
+  text-transform: uppercase;
+`;
+
+export const CouponWrapper = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false
+})``;
+
+export const WrapperList = styled.View`
+  align-items: center;
+`;
+
+export const ProfessionalsWrapper = styled.View`
+  width: 100%;
+
+  margin-top: 30px;
+`;
+
+export const CardWrapper = styled.ScrollView.attrs({
+  contentContainerStyle: {
+    paddingLeft: 40,
+    paddingBottom: 20,
+  },
+  showsHorizontalScrollIndicator: false
+})``;
+
+export const BeefWrapper = styled.View`
+
+`;
+
+export const BarbecueWrapper = styled.View`
+
 `;
