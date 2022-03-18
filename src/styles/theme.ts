@@ -7,6 +7,7 @@ export default {
 
     text: '#232323',
     text_dark: '#000000',
+    text_light: '#FFFFFF',
 
     line: '#F2F2F2',
 
