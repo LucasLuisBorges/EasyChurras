@@ -33,7 +33,7 @@ export const SearchInput = styled.TextInput`
 export const TitleHeader = styled.Text`
   color: ${({ theme }) => theme.colors.text_light};
   font-family: ${({ theme }) => theme.fonts.primary_600};
-  font-size: ${RFValue(26)}px;
+  font-size: ${RFValue(22)}px;
   line-height: 32px;
 
   text-transform: uppercase;

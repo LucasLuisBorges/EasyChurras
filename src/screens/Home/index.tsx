@@ -35,7 +35,7 @@ export function Home(){
       <Header>
         <SearchInput placeholder='Que tipo de churrasco você quer?' />
         <TitleHeader>
-          VENHA PRO MUNDO {'\n'} DO CHURRASCO!
+          VENHA PARA O MUNDO{'\n'}DO CHURRASCO!
         </TitleHeader>
       </Header>
 
@@ -102,6 +102,18 @@ export function Home(){
             title='O mundo das'
             subTitle='carnes'
           />
+
+          <CardWrapper horizontal>
+            <BarbecueCard
+              title='Picanha'
+            />
+            <BarbecueCard
+              title='Fraldinha'
+            />
+            <BarbecueCard
+              title='Alcatra'
+            />
+          </CardWrapper>
         </BeefWrapper>
 
       </ScrollView>

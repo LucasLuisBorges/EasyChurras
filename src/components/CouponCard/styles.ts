@@ -3,13 +3,12 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   width: 80%;
-
+  height: ${RFValue(132)}px;
   align-items: center;
   justify-content: center;
 
   background-color: ${({ theme }) => theme.colors.header};
 
-  padding: 27px 0 51px 0;
   margin-top: 22px;
   margin-right: 10px;
 

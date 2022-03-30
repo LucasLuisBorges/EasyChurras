@@ -12,7 +12,9 @@ import {
 import AppLoading from 'expo-app-loading';
 import theme from './src/styles/theme';
 import { ThemeProvider } from 'styled-components'
+
 import { Home } from './src/screens/Home';
+import { MainMenu } from './src/screens/MainMenu';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,7 +31,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <MainMenu />
     </ThemeProvider>
   )
 }
