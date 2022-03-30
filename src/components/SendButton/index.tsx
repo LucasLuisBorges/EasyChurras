@@ -10,16 +10,17 @@ import {
 
 interface Props extends TouchableOpacityProps {
   color?: string;
+  size: number;
 }
 
-export function SendButton( {color, ...rest} : Props ){
+export function SendButton( {color, size, ...rest} : Props ){
   const theme = useTheme();
 
   return (
     <Container {...rest}>
       <MaterialIcons
         name='chevron-right'
-        size={36}
+        size={size}
         color={color ? color : theme.colors.arrow}
       />
     </Container>

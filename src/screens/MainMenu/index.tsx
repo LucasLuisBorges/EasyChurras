@@ -4,10 +4,10 @@ import ChurrasSvg from '../../assets/churrasqueiro.svg';
 
 import { 
     Container,
-    Content,
     ProfileWrapper,
     Profile,
-    Name
+    Name,
+    Button
 } from './styles';
 import { MenuSelect } from "../../components/MenuSelect";
 import { BackButton } from "../../components/BackButton";
@@ -20,7 +20,6 @@ export function MainMenu() {
     return(
         <Container>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Content>
                     <ProfileWrapper>
                         <BackButton />
 
@@ -85,11 +84,12 @@ export function MainMenu() {
                         title="Siga nossas redes sociais"
                     />
 
-                    <ActionButton
-                        color={theme.colors.main}
-                        title="Sair"
-                    />
-                </Content>
+                    <Button>
+                        <ActionButton
+                            color={theme.colors.main}
+                            title="Sair"
+                        />
+                    </Button>
             </ScrollView>
 
         </Container>

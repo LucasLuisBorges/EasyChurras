@@ -4,14 +4,9 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
-    width:100%;
+    width: 90%;
+    margin: auto;
     margin-top: ${getStatusBarHeight() + 26}px;
-    align-items: center;
-`;
-
-export const Content = styled.View`
-    width: 95%;
-    align-items: center;
 `;
 
 export const ProfileWrapper = styled.View`
@@ -32,4 +27,9 @@ export const Name = styled.Text`
     font-size: ${RFValue(18)}px;
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.primary_700};
+`;
+
+export const Button = styled.View`
+    align-items: center;
+    padding: 10px;
 `;

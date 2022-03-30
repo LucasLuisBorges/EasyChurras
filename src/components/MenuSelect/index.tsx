@@ -2,9 +2,9 @@ import React from "react";
 
 import {
     Container,
-    Wrapper,
     Title,
-    WrapperView
+    WrapperView,
+    WrapperContext
 } from './styles';
 
 import { Feather } from "@expo/vector-icons";
@@ -20,7 +20,8 @@ interface Props {
 export function MenuSelect({ title, iconName, iconActive }: Props) {
     return(
         <Container>
-            <Wrapper>
+            <WrapperContext>
+
                 { iconActive ?
                     <WrapperView>
                         <Feather
@@ -32,10 +33,11 @@ export function MenuSelect({ title, iconName, iconActive }: Props) {
                     :
                     <Title>{title}</Title>
                 }
-                
-            </Wrapper>
 
-            <SendButton />
+            <SendButton
+                size={iconActive ? 36 : 26}
+            />
+            </WrapperContext>
         </Container>
     )
 }
