@@ -7,14 +7,13 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background_primary};
 `;
 
-export const Header = styled.View`
+export const Header = styled.ImageBackground`
   width: 100%;
   height: 300px;
 
   align-items: center;
   justify-content: center;
 
-  background-color: ${({ theme }) => theme.colors.main};
 `;
 
 export const SearchInput = styled.TextInput`
@@ -37,14 +36,6 @@ export const TitleHeader = styled.Text`
   line-height: 32px;
 
   text-transform: uppercase;
-`;
-
-export const CouponWrapper = styled.ScrollView.attrs({
-  showsVerticalScrollIndicator: false
-})``;
-
-export const WrapperList = styled.View`
-  align-items: center;
 `;
 
 export const ProfessionalsWrapper = styled.View`

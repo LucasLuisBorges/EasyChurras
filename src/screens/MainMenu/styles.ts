@@ -4,8 +4,13 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
-    width: 100%;
+    width:100%;
     margin-top: ${getStatusBarHeight() + 26}px;
+    align-items: center;
+`;
+
+export const Content = styled.View`
+    width: 95%;
     align-items: center;
 `;
 

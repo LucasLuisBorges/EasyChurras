@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 
-import { CouponCard } from '../../components/CouponCard';
 import { ProfessionalsCard } from '../../components/ProfessionalsCard';
 import { Title } from '../../components/Title';
 import { BarbecueCard } from '../../components/BarbecueCard';
@@ -11,8 +10,6 @@ import {
   Header,
   SearchInput,
   TitleHeader,
-  CouponWrapper,
-  WrapperList,
   ProfessionalsWrapper,
   CardWrapper,
   BeefWrapper,
@@ -20,6 +17,7 @@ import {
 } from './styles';
 
 export function Home(){
+  const image = {uri: 'https://s2.glbimg.com/nuTa0sOZZ-hoALspr80pbseh5-s=/0x0:2000x1333/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/e/O/FcOCQqScGCmqLBxcssww/condor-12.jpg'}
   return (
     <Container>
 
@@ -32,23 +30,12 @@ export function Home(){
         backgroundColor='transparent'
         translucent
       />
-      <Header>
+      <Header source={image} resizeMode={'cover'} >
         <SearchInput placeholder='Que tipo de churrasco você quer?' />
         <TitleHeader>
           VENHA PARA O MUNDO{'\n'}DO CHURRASCO!
         </TitleHeader>
       </Header>
-
-      
-
-        <CouponWrapper>
-          <WrapperList>
-            <CouponCard
-              title='Fim de semana!!!'
-              subTitle='60% OFF'
-            />
-          </WrapperList>
-        </CouponWrapper>
 
         <ProfessionalsWrapper>
           <Title
