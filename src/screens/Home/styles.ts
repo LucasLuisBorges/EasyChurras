@@ -52,10 +52,6 @@ export const CardWrapper = styled.ScrollView.attrs({
   showsHorizontalScrollIndicator: false
 })``;
 
-export const BeefWrapper = styled.View`
+export const BeefWrapper = styled.View``;
 
-`;
-
-export const BarbecueWrapper = styled.View`
-
-`;
+export const BarbecueWrapper = styled.View``;

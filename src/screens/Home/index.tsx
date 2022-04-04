@@ -61,7 +61,6 @@ export function Home(){
               type='Churrasco vegano'
             />
           </CardWrapper>  
-
         </ProfessionalsWrapper>
 
         <BarbecueWrapper>
@@ -104,7 +103,6 @@ export function Home(){
         </BeefWrapper>
 
       </ScrollView>
-
     </Container>
   );
 }
