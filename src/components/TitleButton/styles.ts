@@ -3,28 +3,25 @@ import styled from 'styled-components/native';
 
 export const TitleWrapper = styled.View`
   align-items: center;
-
-  margin-left: ${RFValue(29)}px;
-
   flex-direction: row;
 `;
 
 export const ProfessionalsTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text};
-  font-family: ${({ theme }) => theme.fonts.primary_700};
-  font-size: ${RFValue(17)}px;
+  font-family: ${({ theme }) => theme.fonts.primary_600};
+  font-size: ${RFValue(14)}px;
 
   text-transform: uppercase;
-
-  margin-bottom: 16px;
 `;
 
 export const SubTitle = styled.Text`
-  color: ${({ theme }) => theme.colors.main};
-  font-family: ${({ theme }) => theme.fonts.primary_700};
-  font-size: ${RFValue(17)}px;
+  color: ${({ theme }) => theme.colors.textOpacity};
+  font-family: ${({ theme }) => theme.fonts.primary_600};
+  font-size: ${RFValue(14)}px;
 
   text-transform: uppercase;
-
-  margin-bottom: 16px;
 `;
+
+export const Wrapper1 = styled.TouchableOpacity``;
+
+export const Wrapper2 = styled.TouchableOpacity``;

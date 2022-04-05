@@ -6,6 +6,7 @@ export default {
     background_secondary: '#F2F2F2',
 
     text: '#232323',
+    textOpacity: '#a6a6a6',
     arrow: '#666666',
     text_dark: '#000000',
     text_light: '#FFFFFF',

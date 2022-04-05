@@ -16,6 +16,7 @@ import { ThemeProvider } from 'styled-components'
 import { Home } from './src/screens/Home';
 import { MainMenu } from './src/screens/MainMenu';
 import { NewBarbecue } from './src/screens/NewBarbecue';
+import { Scheduled } from './src/screens/Scheduled';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +33,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NewBarbecue />
+      <Scheduled />
     </ThemeProvider>
   )
 }
