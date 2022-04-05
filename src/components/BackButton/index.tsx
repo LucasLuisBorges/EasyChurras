@@ -10,16 +10,17 @@ import {
 
 interface Props extends TouchableOpacityProps {
   color?: string;
+  size?: number;
 }
 
-export function BackButton( {color, ...rest} : Props ){
+export function BackButton( {color, size = 36, ...rest} : Props ){
   const theme = useTheme();
 
   return (
     <Container {...rest}>
       <MaterialIcons
         name='chevron-left'
-        size={36}
+        size={size}
         color={color ? color : theme.colors.arrow}
       />
     </Container>
