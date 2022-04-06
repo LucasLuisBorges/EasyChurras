@@ -18,6 +18,7 @@ import { MainMenu } from './src/screens/MainMenu';
 import { NewBarbecue } from './src/screens/NewBarbecue';
 import { Scheduled } from './src/screens/Scheduled';
 import { BarbecueComplete } from './src/screens/BarbecueComplete';
+import { MyAcount } from './src/screens/MyAcount';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,7 +35,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <BarbecueComplete />
+      <MyAcount />
     </ThemeProvider>
   )
 }

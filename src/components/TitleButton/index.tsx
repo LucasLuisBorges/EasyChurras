@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  TitleWrapper,
+  Wrapper,
   ProfessionalsTitle,
   SubTitle,
-  Wrapper1,
-  Wrapper2
+  TitleWrapper,
+  SubtitleWrapper
 } from './styles';
 
 interface Props {
@@ -16,14 +16,14 @@ interface Props {
 export function TitleButton({title, subTitle} : Props){
   const [state, setState] = useState(true);
   return (
-    <TitleWrapper>
-      <Wrapper1 >
+    <Wrapper>
+      <TitleWrapper>
         <ProfessionalsTitle>{title}</ProfessionalsTitle>
-      </Wrapper1>
+      </TitleWrapper>
 
-      <Wrapper2 >
+      <SubtitleWrapper >
         <SubTitle>{`    ${subTitle}`}</SubTitle>
-      </Wrapper2>
-    </TitleWrapper>
+      </SubtitleWrapper>
+    </Wrapper>
   );
 }

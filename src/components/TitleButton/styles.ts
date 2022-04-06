@@ -1,7 +1,7 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-export const TitleWrapper = styled.View`
+export const Wrapper = styled.View`
   align-items: center;
   flex-direction: row;
 `;
@@ -22,6 +22,6 @@ export const SubTitle = styled.Text`
   text-transform: uppercase;
 `;
 
-export const Wrapper1 = styled.TouchableOpacity``;
+export const TitleWrapper = styled.TouchableOpacity``;
 
-export const Wrapper2 = styled.TouchableOpacity``;
+export const SubtitleWrapper = styled.TouchableOpacity``;
