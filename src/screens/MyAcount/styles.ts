@@ -13,7 +13,7 @@ export const WrapperMenu = styled.View`
   flex-direction: row;
   align-items: center;
   
-  margin: 18px 0 105px 20px;
+  margin: 18px 0 60px 20px;
 `;
 
 export const Title = styled.Text`
@@ -123,5 +123,10 @@ export const TitleInfo = styled.Text`
 
   align-self: center;
   padding: 33px 0 33px 0;
+`;
+
+export const AcountInfoWrapper = styled.View`
+  width: 80%;
+  align-self: center;
 `;
 

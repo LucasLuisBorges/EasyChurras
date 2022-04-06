@@ -20,8 +20,10 @@ import {
   SubTitle,
   Feedback,
   WrapperInfo,
-  TitleInfo
+  TitleInfo,
+  AcountInfoWrapper
 } from './styles'
+import { MenuSelect } from '../../components/MenuSelect';
 
 export function MyAcount() {
   const image = { uri: 'https://jpimg.com.br/uploads/2022/02/design-sem-nome-2022-02-08t091532.650.jpg' }
@@ -65,6 +67,12 @@ export function MyAcount() {
 
         <WrapperInfo>
           <TitleInfo>Minha Conta</TitleInfo>
+
+          <AcountInfoWrapper>
+            <MenuSelect title='Meus Endereços' iconActive={true}/>
+            <MenuSelect title='Forma de pagamento' iconActive={true}/>
+            <MenuSelect title='Editar dados' iconActive={true}/>
+          </AcountInfoWrapper>
         </WrapperInfo>
       </WrapperProfile>
     </Container>

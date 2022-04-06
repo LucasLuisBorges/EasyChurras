@@ -9,17 +9,18 @@ import {
 
 import { Feather } from "@expo/vector-icons";
 import { SendButton } from '../SendButton'
+import { TouchableOpacityProps } from "react-native";
 
 
-interface Props {
+interface Props extends TouchableOpacityProps{
     title: string;
     iconName?: React.ComponentProps<typeof Feather>['name']
     iconActive: boolean;
 }
 
-export function MenuSelect({ title, iconName, iconActive }: Props) {
+export function MenuSelect({ title, iconName, iconActive, ...rest }: Props) {
     return(
-        <Container>
+        <Container {...rest}>
             <WrapperContext>
 
                 { iconActive ?
