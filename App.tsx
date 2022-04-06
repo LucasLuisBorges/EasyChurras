@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppTabRoutes } from './src/routes/app.tab.routes';
 
 import {
   useFonts,
@@ -35,7 +37,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <NavigationContainer>
+        <AppTabRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   )
 }
