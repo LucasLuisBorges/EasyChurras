@@ -7,7 +7,7 @@ export const Wrapper = styled.View`
 `;
 
 export const ProfessionalsTitle = styled.Text`
-  color: ${({ theme }) => theme.colors.text};
+  
   font-family: ${({ theme }) => theme.fonts.primary_600};
   font-size: ${RFValue(14)}px;
 
@@ -15,7 +15,7 @@ export const ProfessionalsTitle = styled.Text`
 `;
 
 export const SubTitle = styled.Text`
-  color: ${({ theme }) => theme.colors.textOpacity};
+  
   font-family: ${({ theme }) => theme.fonts.primary_600};
   font-size: ${RFValue(14)}px;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
 import { TitleButton } from '../../components/TitleButton';
@@ -15,6 +16,11 @@ import {
 export function Scheduled(){
   return (
     <Container>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="#F2F2F2"
+        translucent
+      />
       <WrapperMenu>
         <BackButton size={41} />
 

@@ -13,7 +13,7 @@ import { MyAcount } from '../../src/screens/MyAcount';
 
 import HomeSvg from '../assets/home.svg';
 import PeopleSvg from '../assets/people.svg';
-import SpeedSvg from '../assets/speed.svg';
+import LogoSvg from '../assets/logo.svg';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -38,7 +38,7 @@ export function AppTabRoutes() {
         component={Home}
         options={{
           tabBarIcon: (({ color }) => (
-            <HomeSvg width={24} height={24} fill={color} />
+            <HomeSvg width={30} height={30} fill={color} />
           ))
         }}
       />
@@ -47,7 +47,7 @@ export function AppTabRoutes() {
         component={Scheduled}
         options={{
           tabBarIcon: (({ color }) => (
-            <SpeedSvg width={24} height={24} fill={color} />
+            <LogoSvg width={36} height={36} fill={color} />
           ))
         }}
       />
@@ -56,7 +56,7 @@ export function AppTabRoutes() {
         component={MyAcount}
         options={{
           tabBarIcon: (({ color }) => (
-            <PeopleSvg width={24} height={24} fill={color} />
+            <PeopleSvg width={30} height={30} fill={color} />
           ))
         }}
       />
