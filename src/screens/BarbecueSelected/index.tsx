@@ -1,12 +1,19 @@
 import React from "react";
-import { StatusBar } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 import { TitleButtonSelected } from "../../components/TitleButtonSelected";
 
 import {
     Container,
     Header,
     Title,
-    SubTitle
+    SubTitle,
+    PriceHourWapper,
+    PriceWrapper,
+    Hour,
+    Price,
+    QuantGPeople,
+    BarbecuePriceWrapper,
+    BarbecueTitle
 } from './styles'
 
 export function BarbecueSelected() {
@@ -15,17 +22,32 @@ export function BarbecueSelected() {
     }
     return (
         <Container>
-            <StatusBar
-                barStyle="light-content"
-                backgroundColor="transparent"
-                translucent
-            />
-            <Header source={image}>
-                <TitleButtonSelected title="Tipo de churrasco" />
-            </Header>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <StatusBar
+                    barStyle="light-content"
+                    backgroundColor="transparent"
+                    translucent
+                />
+                <Header source={image}>
+                    <TitleButtonSelected title="Tipo de churrasco" />
+                </Header>
 
-            <Title>Churrasco Brasileiro</Title>
-            <SubTitle>Sobre o churrasco</SubTitle>
+                <Title>Churrasco Brasileiro</Title>
+                <SubTitle>Sobre o churrasco</SubTitle>
+
+                <PriceHourWapper>
+                    <PriceWrapper>
+                        <Hour>1-3 horas</Hour>
+                        <Price>R$ 25,00</Price>
+                    </PriceWrapper>
+                    <QuantGPeople>300g /pessoa</QuantGPeople>
+                </PriceHourWapper>
+
+                <BarbecuePriceWrapper>
+                    <BarbecueTitle>Carnes</BarbecueTitle>
+                </BarbecuePriceWrapper>
+                
+            </ScrollView>
         </Container>
     )
 }
