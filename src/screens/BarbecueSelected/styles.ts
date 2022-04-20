@@ -50,6 +50,8 @@ export const Hour = styled.Text`
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.primary_600};
     font-size: ${RFValue(14)}px;
+
+    margin-left: 10px;
 `;
 
 export const Price = styled.Text`
@@ -62,15 +64,38 @@ export const QuantGPeople = styled.Text`
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.primary_600};
     font-size: ${RFValue(14)}px;
+
+    margin-left: 10px;
 `;
 
 export const BarbecuePriceWrapper = styled.View`
+    width: 85%;
     align-self: center;
-    margin-top: 15px;
+
+    margin-bottom: 10px;
 `;
 
 export const BarbecueTitle = styled.Text`
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.primary_600};
     font-size: ${RFValue(16)}px;
+
+    text-transform: uppercase;
+
+    align-self: center;
+    margin-top: 15px;
+`;
+
+export const ButtonWrapper = styled.View`
+    margin-bottom: 10px;
+`;
+
+export const TimeWrapper = styled.View`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const PeopleWrapper = styled.View`
+    display: flex;
+    flex-direction: row;  
 `;

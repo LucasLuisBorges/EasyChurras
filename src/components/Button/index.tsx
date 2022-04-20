@@ -1,17 +1,18 @@
 import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
 
 import {
   Container,
   Title
 } from './styles';
 
-interface IProps {
+interface IProps extends TouchableOpacityProps {
   title: string;
 }
 
-export function Button({ title }: IProps){
+export function Button({ title, ...rest }: IProps){
   return (
-    <Container>
+    <Container {...rest}>
       <Title>{title}</Title>
     </Container>
   );
