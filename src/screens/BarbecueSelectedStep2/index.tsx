@@ -1,32 +1,28 @@
 import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 import { BarbecuePrice } from "../../components/BarbecuePrice";
-import { Button } from "../../components/Button";
-import { TitleButtonSelected } from "../../components/TitleButtonSelected";
 import { AntDesign } from "@expo/vector-icons";
 
 import {
     Container,
-    Header,
     Title,
     SubTitle,
     PriceHourWapper,
     PriceWrapper,
     Hour,
     Price,
-    QuantGPeople,
     BarbecuePriceWrapper,
-    BarbecueTitle,
-    ButtonWrapper,
     TimeWrapper,
-    PeopleWrapper,
-    TitleWrapper
-} from './styles'
+    ButtonWrapper
+} from './styled';
+
 import { useTheme } from "styled-components";
 
 import { HeaderComp } from "../../components/HeaderComp";
+import { ActionButton } from "../../components/ActionButton";
+import { Button } from "../../components/Button";
 
-export function BarbecueSelected() {
+export function BarbecueSelectedStep2() {
     const theme = useTheme();
 
     return (
@@ -39,66 +35,54 @@ export function BarbecueSelected() {
 
             <ScrollView showsVerticalScrollIndicator={false}>
 
-                <HeaderComp title="Tipo de Churrasco"/>
+                <HeaderComp title="Tipo de Churrasco" />
 
-                <Title>Churrasco Brasileiro</Title>
-                <SubTitle>Sobre o churrasco</SubTitle>
+                <Title>Acompanhamento</Title>
+                <SubTitle>
+                    Selecione os acompanhamentosdo churrasco brasileiro.
+                </SubTitle>
 
                 <PriceHourWapper>
                     <PriceWrapper>
                         <TimeWrapper>
                             <AntDesign name="clockcircle" color={theme.colors.textOpacity} size={16} />
-                            <Hour>1-3 horas</Hour>
+                            <Hour>100g /pessoa</Hour>
                         </TimeWrapper>
                         <Price>R$ 25,00</Price>
                     </PriceWrapper>
-                    <PeopleWrapper>
-                        <AntDesign name="clockcircle" color={theme.colors.textOpacity} size={16} />
-                        <QuantGPeople>300g /pessoa</QuantGPeople>
-                    </PeopleWrapper>
                 </PriceHourWapper>
-
-                <BarbecueTitle>Carnes</BarbecueTitle>
 
                 <BarbecuePriceWrapper>
                     <BarbecuePrice
-                        name="Picanha"
+                        name="Arroz"
                         price="8,99"
                     />
 
                     <BarbecuePrice
-                        name="Maminha"
+                        name="Pão de alho"
                         price="8,99"
                     />
 
                     <BarbecuePrice
-                        name="fraldinha"
+                        name="Maionese de batata"
                         price="8,99"
                     />
 
                     <BarbecuePrice
-                        name="Contra filé"
+                        name="Queijo coalho"
                         price="8,99"
                     />
 
                     <BarbecuePrice
-                        name="Coxinha da asa"
-                        price="8,99"
-                    />
-
-                    <BarbecuePrice
-                        name="Picanha"
+                        name="Farofa"
                         price="8,99"
                     />
                 </BarbecuePriceWrapper>
             </ScrollView>
-
             <ButtonWrapper>
-                <Button
-                    title="Selecionar"
-                    onPress={() => { }}
-                />
+                <Button title="Próximo" />
             </ButtonWrapper>
+
         </Container>
     )
 }
