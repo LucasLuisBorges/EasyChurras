@@ -6,6 +6,7 @@ import { AntDesign } from "@expo/vector-icons";
 import {
     Container,
     Title,
+    SubTitleWrapper,
     SubTitle,
     PriceHourWapper,
     PriceWrapper,
@@ -19,7 +20,6 @@ import {
 import { useTheme } from "styled-components";
 
 import { HeaderComp } from "../../components/HeaderComp";
-import { ActionButton } from "../../components/ActionButton";
 import { Button } from "../../components/Button";
 
 export function BarbecueSelectedStep2() {
@@ -38,9 +38,11 @@ export function BarbecueSelectedStep2() {
                 <HeaderComp title="Tipo de Churrasco" />
 
                 <Title>Acompanhamento</Title>
-                <SubTitle>
-                    Selecione os acompanhamentosdo churrasco brasileiro.
-                </SubTitle>
+                <SubTitleWrapper>
+                    <SubTitle>
+                        Selecione os acompanhamentos do churrasco brasileiro.
+                    </SubTitle>
+                </SubTitleWrapper>
 
                 <PriceHourWapper>
                     <PriceWrapper>

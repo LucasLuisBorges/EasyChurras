@@ -16,6 +16,11 @@ export const Title = styled.Text`
     margin-top: 20px;
 `;
 
+export const SubTitleWrapper = styled.View`
+    width: 70%;
+    align-self: center;
+`;
+
 export const SubTitle = styled.Text`
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.primary_500};
@@ -23,6 +28,7 @@ export const SubTitle = styled.Text`
 
     align-items: center;
     align-self: center;
+    text-align: center;
 
     margin-top: 10px;
 `;
