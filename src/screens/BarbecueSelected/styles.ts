@@ -5,6 +5,10 @@ export const Container = styled.View`
     flex: 1;
 `;
 
+export const TitleWrapper = styled.View`
+width: 100%;
+`;
+
 export const Header = styled.ImageBackground`
     width: 100%;
     height: 375px;
@@ -87,7 +91,7 @@ export const BarbecueTitle = styled.Text`
 `;
 
 export const ButtonWrapper = styled.View`
-    margin-bottom: 10px;
+    margin: 10px 0;
 `;
 
 export const TimeWrapper = styled.View`

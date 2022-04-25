@@ -19,26 +19,27 @@ import {
     BarbecueTitle,
     ButtonWrapper,
     TimeWrapper,
-    PeopleWrapper
+    PeopleWrapper,
+    TitleWrapper
 } from './styles'
 import { useTheme } from "styled-components";
 
+import { HeaderComp } from "../../components/HeaderComp";
+
 export function BarbecueSelected() {
     const theme = useTheme();
-    const image = {
-        uri: 'https://www.lopessupermercados.com.br/portalrevista/wp-content/uploads/2019/11/shutterstock_413328976-600x380.jpg'
-    }
+
     return (
         <Container>
+            <StatusBar
+                barStyle="light-content"
+                backgroundColor="transparent"
+                translucent
+            />
+
             <ScrollView showsVerticalScrollIndicator={false}>
-                <StatusBar
-                    barStyle="light-content"
-                    backgroundColor="transparent"
-                    translucent
-                />
-                <Header source={image}>
-                    <TitleButtonSelected title="Tipo de churrasco" />
-                </Header>
+
+                <HeaderComp title="Tipo de Churrasco"/>
 
                 <Title>Churrasco Brasileiro</Title>
                 <SubTitle>Sobre o churrasco</SubTitle>
@@ -90,14 +91,14 @@ export function BarbecueSelected() {
                         price="8,99"
                     />
                 </BarbecuePriceWrapper>
-
-                <ButtonWrapper>
-                    <Button
-                        title="Selecionar"
-                        onPress={() => { }}
-                    />
-                </ButtonWrapper>
             </ScrollView>
+
+            <ButtonWrapper>
+                <Button
+                    title="Selecionar"
+                    onPress={() => { }}
+                />
+            </ButtonWrapper>
         </Container>
     )
 }
