@@ -14,7 +14,7 @@ import {
 import AppLoading from 'expo-app-loading';
 import theme from './src/styles/theme';
 import { ThemeProvider } from 'styled-components'
-import { BarbecueSelectedStep2 } from './src/screens/BarbecueSelectedStep2';
+import { BarbecueSelectedStep1 } from './src/screens/BarbecueSelectedStep1';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +32,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <BarbecueSelectedStep2 />
+        <BarbecueSelectedStep1 />
       </NavigationContainer>
     </ThemeProvider>
   )
