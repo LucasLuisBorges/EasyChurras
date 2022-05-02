@@ -2,12 +2,10 @@ import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 import { BarbecuePrice } from "../../components/BarbecuePrice";
 import { Button } from "../../components/Button";
-import { TitleButtonSelected } from "../../components/TitleButtonSelected";
 import { AntDesign } from "@expo/vector-icons";
 
 import {
     Container,
-    Header,
     Title,
     SubTitle,
     PriceHourWapper,
@@ -20,7 +18,6 @@ import {
     ButtonWrapper,
     TimeWrapper,
     PeopleWrapper,
-    TitleWrapper
 } from './styles'
 import { useTheme } from "styled-components";
 
@@ -78,17 +75,17 @@ export function BarbecueSelectedStep1() {
 
                     <BarbecuePrice
                         name="Contra filé"
-                        price="8,99"
+                        price="5,99"
                     />
 
                     <BarbecuePrice
                         name="Coxinha da asa"
-                        price="8,99"
+                        price="87,99"
                     />
 
                     <BarbecuePrice
                         name="Picanha"
-                        price="8,99"
+                        price="87,49"
                     />
                 </BarbecuePriceWrapper>
             </ScrollView>

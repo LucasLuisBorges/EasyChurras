@@ -9,11 +9,6 @@ export const TitleWrapper = styled.View`
 width: 100%;
 `;
 
-export const Header = styled.ImageBackground`
-    width: 100%;
-    height: 375px;
-`;
-
 export const Title = styled.Text`
     color: ${({ theme }) => theme.colors.text_dark};
     font-family: ${({ theme }) => theme.fonts.primary_700};
