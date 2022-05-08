@@ -33,21 +33,10 @@ export const WrapperInput = styled.View`
     align-self: center;
 `;
 
-export const JobArea = styled.View``;
+export const JobArea = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
 
-export const TitleInput = styled.Text`
-    font-size: ${RFValue(12)}px;
-    font-family: ${({ theme }) => theme.fonts.primary_500};
-
-    text-transform: uppercase;
-
-    margin-bottom: 5px;
-`;
-
-export const JobInput = styled.TextInput`
-    border-width: 1px;
-    border-color: ${theme.colors.background_secondary};
-
-    border-radius: 4px;
-    padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 `;
