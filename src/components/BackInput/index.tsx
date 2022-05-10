@@ -1,10 +1,7 @@
 import React from 'react';
 import { BackButton } from '../BackButton';
 
-import {
-  Container,
-  InputArea
-} from './styles';
+import * as S from './styles';
 
 interface IProps {
   text: string;
@@ -12,10 +9,10 @@ interface IProps {
 
 export function BackInput({ text }: IProps){
   return (
-    <Container>
+    <S.Container>
       <BackButton size={41}/>
 
-      <InputArea placeholder={text}/>
-    </Container>
+      <S.InputArea placeholder={text}/>
+    </S.Container>
   );
 }

@@ -1,14 +1,7 @@
 import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 
-import {
-    Container,
-    InfoWrapper,
-    ProfileWrapper,
-    Profile,
-    Name,
-    Button
-} from './styles';
+import * as S from './styles';
 
 import { MenuSelect } from "../../components/MenuSelect";
 import { BackButton } from "../../components/BackButton";
@@ -20,27 +13,29 @@ export function MainMenu() {
     const image = { uri: 'https://jpimg.com.br/uploads/2022/02/design-sem-nome-2022-02-08t091532.650.jpg' }
 
     return (
-        <Container>
+        <S.Container>
             <StatusBar
                 barStyle='dark-content'
                 backgroundColor='transparent'
                 translucent
             />
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <ProfileWrapper>
+            <ScrollView 
+                showsVerticalScrollIndicator={false}
+            >
+                <S.ProfileWrapper>
                     <BackButton />
 
-                    <InfoWrapper>
+                    <S.InfoWrapper>
 
-                        <Profile
+                        <S.Profile
                             source={image}
                             resizeMode={'cover'}
                             imageStyle={{ borderRadius: 36 }}
                         />
 
-                        <Name>Maria</Name>
-                    </InfoWrapper>
-                </ProfileWrapper>
+                        <S.Name>Maria</S.Name>
+                    </S.InfoWrapper>
+                </S.ProfileWrapper>
 
                 <MenuSelect
                     iconActive={true}
@@ -96,14 +91,14 @@ export function MainMenu() {
                     title="Siga nossas redes sociais"
                 />
 
-                <Button>
+                <S.Button>
                     <ActionButton
                         color={theme.colors.main}
                         title="Sair"
                     />
-                </Button>
+                </S.Button>
             </ScrollView>
 
-        </Container>
+        </S.Container>
     )
 }

@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
-import {
-  Wrapper,
-  ProfessionalsTitle,
-  SubTitle,
-  TitleWrapper,
-  SubtitleWrapper
-} from './styles';
+import * as S from './styles';
 
 interface Props {
   title: string;
@@ -33,15 +27,19 @@ export function TitleButton({title, subTitle} : Props){
   }
 
   return (
-    <Wrapper>
-      <TitleWrapper onPress={TitleClickStyle}>
-        <ProfessionalsTitle style={titleState ? styles.text2 : styles.text1}>{title}</ProfessionalsTitle>
-      </TitleWrapper>
+    <S.Wrapper>
+      <S.TitleWrapper onPress={TitleClickStyle}>
+        <S.ProfessionalsTitle style={titleState ? styles.text2 : styles.text1}>
+          {title}
+        </S.ProfessionalsTitle>
+      </S.TitleWrapper>
 
-      <SubtitleWrapper onPress={SubTitleClickStyle}>
-        <SubTitle style={titleState ? styles.text1 : styles.text2}>{`    ${subTitle}`}</SubTitle>
-      </SubtitleWrapper>
-    </Wrapper>
+      <S.SubtitleWrapper onPress={SubTitleClickStyle}>
+        <S.SubTitle style={titleState ? styles.text1 : styles.text2}>
+          {`    ${subTitle}`}
+        </S.SubTitle>
+      </S.SubtitleWrapper>
+    </S.Wrapper>
   );
 }
 

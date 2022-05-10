@@ -4,9 +4,7 @@ import { useTheme } from 'styled-components';
 
 import { MaterialIcons } from '@expo/vector-icons'
 
-import {
-  Container
-} from './styles';
+import * as S from './styles';
 
 interface Props extends TouchableOpacityProps {
   color?: string;
@@ -17,12 +15,12 @@ export function BackButton( {color, size = 36, ...rest} : Props ){
   const theme = useTheme();
 
   return (
-    <Container {...rest}>
+    <S.Container {...rest}>
       <MaterialIcons
         name='chevron-left'
         size={size}
         color={color ? color : theme.colors.arrow}
       />
-    </Container>
+    </S.Container>
   );
 }

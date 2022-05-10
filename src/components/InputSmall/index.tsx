@@ -1,10 +1,6 @@
 import React from "react";
 
-import {
-    Container,
-    TitleInput,
-    JobInput
-} from './styles';
+import * as S from './styles';
 
 interface IProps {
     title: string;
@@ -14,12 +10,14 @@ interface IProps {
 
 export function InputSmall({ title, placeholder, inNumeric } : IProps) {
     return (
-        <Container >
-            <TitleInput>{title}</TitleInput>
-            <JobInput
+        <S.Container >
+            <S.TitleInput>
+                {title}
+            </S.TitleInput>
+            <S.JobInput
                 placeholder={placeholder}
                 keyboardType ={inNumeric ? 'numeric' : 'default'}
             />
-        </Container>
+        </S.Container>
     )
 }

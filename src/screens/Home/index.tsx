@@ -5,38 +5,41 @@ import { ProfessionalsCard } from '../../components/ProfessionalsCard'
 import { Title } from '../../components/Title'
 import { BarbecueCard } from '../../components/BarbecueCard'
 
-import {
-  Container,
-  Header,
-  SearchInput,
-  TitleHeader,
-  ProfessionalsWrapper,
-  CardWrapper,
-  BeefWrapper,
-  BarbecueWrapper
-} from './styles'
+import * as S from './styles'
 
 export function Home() {
   const image = {
     uri: 'https://s2.glbimg.com/nuTa0sOZZ-hoALspr80pbseh5-s=/0x0:2000x1333/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/e/O/FcOCQqScGCmqLBxcssww/condor-12.jpg'
   }
   return (
-    <Container>
-      <ScrollView showsVerticalScrollIndicator={false}>
+    <S.Container>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+      >
         <StatusBar
           barStyle="light-content"
           backgroundColor="transparent"
           translucent
         />
-        <Header source={image} resizeMode={'cover'}>
-          <SearchInput placeholder="Que tipo de churrasco você quer?" />
-          <TitleHeader>VENHA PARA O MUNDO{'\n'}DO CHURRASCO!</TitleHeader>
-        </Header>
+        <S.Header 
+          source={image}
+          resizeMode={'cover'}
+        >
+          <S.SearchInput
+            placeholder="Que tipo de churrasco você quer?"
+          />
+          <S.TitleHeader>
+            VENHA PARA O MUNDO{'\n'}DO CHURRASCO!
+          </S.TitleHeader>
+        </S.Header>
 
-        <ProfessionalsWrapper>
-          <Title title="Profissionais" subTitle="perto de você" />
+        <S.ProfessionalsWrapper>
+          <Title 
+            title="Profissionais"
+            subTitle="perto de você"
+          />
 
-          <CardWrapper horizontal>
+          <S.CardWrapper horizontal>
             <ProfessionalsCard
               distace="3,4 km"
               name="Paulo Vieira"
@@ -53,29 +56,35 @@ export function Home() {
               name="Marcos Silva"
               type="Churrasco vegano"
             />
-          </CardWrapper>
-        </ProfessionalsWrapper>
+          </S.CardWrapper>
+        </S.ProfessionalsWrapper>
 
-        <BarbecueWrapper>
-          <Title title="o mundo do" subTitle="Churrasco" />
+        <S.BarbecueWrapper>
+          <Title 
+            title="o mundo do"
+            subTitle="Churrasco"
+          />
 
-          <CardWrapper horizontal>
+          <S.CardWrapper horizontal>
             <BarbecueCard title="Brasileiro" />
             <BarbecueCard title="Brasileiro" />
             <BarbecueCard title="Brasileiro" />
-          </CardWrapper>
-        </BarbecueWrapper>
+          </S.CardWrapper>
+        </S.BarbecueWrapper>
 
-        <BeefWrapper>
-          <Title title="O mundo das" subTitle="carnes" />
+        <S.BeefWrapper>
+          <Title 
+            title="O mundo das"
+            subTitle="carnes"
+          />
 
-          <CardWrapper horizontal>
+          <S.CardWrapper horizontal>
             <BarbecueCard title="Picanha" />
             <BarbecueCard title="Fraldinha" />
             <BarbecueCard title="Alcatra" />
-          </CardWrapper>
-        </BeefWrapper>
+          </S.CardWrapper>
+        </S.BeefWrapper>
       </ScrollView>
-    </Container>
+    </S.Container>
   )
 }

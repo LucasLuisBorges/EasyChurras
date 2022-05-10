@@ -3,11 +3,7 @@ import { TouchableOpacityProps } from 'react-native';
 
 import BarbecueSvg from '../../assets/barbecue.svg'
 
-import {
-  Container,
-  TextWrapper,
-  Title
-} from './styles';
+import * as S from './styles';
 
 interface Props extends TouchableOpacityProps {
   title: string;
@@ -15,11 +11,16 @@ interface Props extends TouchableOpacityProps {
 
 export function BarbecueCard({title, ...rest} : Props){
   return (
-    <Container {...rest}>
-      <BarbecueSvg height={150} width={150} />
-      <TextWrapper>
-        <Title>{title}</Title>
-      </TextWrapper>
-    </Container>
+    <S.Container {...rest}>
+      <BarbecueSvg 
+        height={150}
+        width={150}
+      />
+      <S.TextWrapper>
+        <S.Title>
+          {title}
+        </S.Title>
+      </S.TextWrapper>
+    </S.Container>
   );
 }

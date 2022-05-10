@@ -1,10 +1,7 @@
 import React from "react";
 import { TitleButtonSelected } from "../TitleButtonSelected";
 
-import {
-    HeaderWrapper,
-    TitleWrapper
-} from './styled'
+import * as S from './styled'
 
 interface IProps {
     title: string;
@@ -15,10 +12,14 @@ export function HeaderComp({ title }: IProps) {
         uri: 'https://www.lopessupermercados.com.br/portalrevista/wp-content/uploads/2019/11/shutterstock_413328976-600x380.jpg'
     }
     return (
-            <HeaderWrapper source={image}>
-                <TitleWrapper>
-                    <TitleButtonSelected title={title} />
-                </TitleWrapper>
-            </HeaderWrapper>
+            <S.HeaderWrapper 
+                source={image}
+            >
+                <S.TitleWrapper>
+                    <TitleButtonSelected 
+                        title={title}
+                    />
+                </S.TitleWrapper>
+            </S.HeaderWrapper>
     )
 }

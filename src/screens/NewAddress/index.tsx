@@ -5,34 +5,30 @@ import { InputFull } from '../../components/InputFull'
 import { InputMedium } from '../../components/InputMedium'
 import { InputSmall } from '../../components/InputSmall'
 
-import {
-  Container,
-  WrapperMenu,
-  Title,
-  WrapperInput,
-  JobArea
-} from './styles'
+import * as S from './styles'
 
 export function NewAddress() {
   return (
-    <Container>
+    <S.Container>
       <StatusBar
         barStyle="dark-content"
         backgroundColor="#FFFFFF"
         translucent
       />
-      <WrapperMenu>
+      <S.WrapperMenu>
         <BackButton size={41} />
 
-        <Title>Novo Endereço</Title>
-      </WrapperMenu>
+        <S.Title>
+          Novo Endereço
+        </S.Title>
+      </S.WrapperMenu>
 
-      <WrapperInput>
+      <S.WrapperInput>
         <InputFull
           title='Nome do endereço'
           placeholder='TRABALHO'
         />
-        <JobArea>
+        <S.JobArea>
           <InputMedium
             title='Cep'
             placeholder='00000-000'
@@ -43,14 +39,14 @@ export function NewAddress() {
             placeholder='0000'
             inNumeric={true}
           />
-        </JobArea>
+        </S.JobArea>
 
         <InputFull
           title='Nome da rua'
           placeholder='Nome da rua'
         />
 
-        <JobArea>
+        <S.JobArea>
           <InputMedium
             title='Cidade'
             placeholder='Nome da cidade'
@@ -61,8 +57,8 @@ export function NewAddress() {
             placeholder='SC'
             inNumeric={false}
           />
-        </JobArea>
-      </WrapperInput>
-    </Container>
+        </S.JobArea>
+      </S.WrapperInput>
+    </S.Container>
   )
 }

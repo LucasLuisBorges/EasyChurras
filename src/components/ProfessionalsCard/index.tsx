@@ -4,15 +4,7 @@ import { TouchableOpacityProps } from 'react-native';
 import ChurrasSvg from '../../assets/churrasqueiro.svg'
 import StarSvg from '../../assets/star.svg'
 
-import {
-  Container,
-  WrapperImage,
-  WrapperDetail,
-  Distance,
-  Name,
-  Type,
-  WrapperStar
-} from './styles';
+import * as S from './styles';
 
 interface Props extends TouchableOpacityProps {
   name: string;
@@ -22,22 +14,31 @@ interface Props extends TouchableOpacityProps {
 
 export function ProfessionalsCard({ name, distace, type, ...rest } : Props){
   return (
-    <Container {...rest}>
-      <WrapperImage>
-        <ChurrasSvg height={75} width={75} />
-      </WrapperImage>
-      <WrapperDetail>
-        <Distance>{distace}</Distance>
-        <Name>{name}</Name>
-        <Type>{type}</Type>
-        <WrapperStar>
+    <S.Container {...rest}>
+      <S.WrapperImage>
+        <ChurrasSvg
+          height={75}
+          width={75}
+        />
+      </S.WrapperImage>
+      <S.WrapperDetail>
+        <S.Distance>
+          {distace}
+        </S.Distance>
+        <S.Name>
+          {name}
+        </S.Name>
+        <S.Type>
+          {type}
+        </S.Type>
+        <S.WrapperStar>
           <StarSvg height={15} width={15} />
           <StarSvg height={15} width={15} />
           <StarSvg height={15} width={15} />
           <StarSvg height={15} width={15} />
           <StarSvg height={15} width={15} />
-        </WrapperStar>
-      </WrapperDetail>
-    </Container>
+        </S.WrapperStar>
+      </S.WrapperDetail>
+    </S.Container>
   );
 }

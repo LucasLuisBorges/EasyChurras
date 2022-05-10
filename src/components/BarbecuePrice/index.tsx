@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "styled-components";
 import theme from "../../styles/theme";
 
-import {
-    Container,
-    CheckWrapper,
-    Check,
-    Title,
-    Price
-} from './styles';
+import * as S from './styles';
 
 interface IProps {
     name?: string;
@@ -19,18 +13,22 @@ export function BarbecuePrice({ name, price }: IProps) {
     const [checked, setChecked] = useState(false);
     const theme = useTheme();
     return (
-        <Container>
-            <CheckWrapper>
-                <Check 
+        <S.Container>
+            <S.CheckWrapper>
+                <S.Check 
                     status={checked ? 'checked' : 'unchecked'}
                     onPress={() => {
                         setChecked(!checked);
                       }}
                     color={theme.colors.success_light}
                 />
-                <Title>{name}</Title>
-            </CheckWrapper>
-            <Price>+ R$ {price}</Price>
-        </Container>
+                <S.Title>
+                    {name}
+                </S.Title>
+            </S.CheckWrapper>
+            <S.Price>
+                + R$ {price}
+            </S.Price>
+        </S.Container>
     );
 };

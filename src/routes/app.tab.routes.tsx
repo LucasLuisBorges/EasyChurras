@@ -5,10 +5,7 @@ import { useTheme } from "styled-components";
 import { Platform } from "react-native";
 
 import { Home } from '../../src/screens/Home';
-import { MainMenu } from '../../src/screens/MainMenu';
-import { NewBarbecue } from '../../src/screens/NewBarbecue';
 import { Scheduled } from '../../src/screens/Scheduled';
-import { BarbecueComplete } from '../../src/screens/BarbecueComplete';
 import { MyAcount } from '../../src/screens/MyAcount';
 
 import HomeSvg from '../assets/home.svg';

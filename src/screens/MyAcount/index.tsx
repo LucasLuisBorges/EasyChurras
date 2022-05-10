@@ -4,77 +4,78 @@ import { BackButton } from '../../components/BackButton'
 
 import StarSvg from '../../assets/star.svg';
 
-import { 
-  Container,
-  WrapperMenu,
-  Title,
-  WrapperProfile,
-  WrapperHeader,
-  Image,
-  Name,
-  WrapperPoint,
-  PointsText,
-  WrapperStatus,
-  Performed,
-  Count,
-  SubTitle,
-  Feedback,
-  WrapperInfo,
-  TitleInfo,
-  AcountInfoWrapper
-} from './styles'
+import * as S from './styles'
 import { MenuSelect } from '../../components/MenuSelect';
 
 export function MyAcount() {
   const image = { uri: 'https://jpimg.com.br/uploads/2022/02/design-sem-nome-2022-02-08t091532.650.jpg' }
   return (
-    <Container>
+    <S.Container>
       <StatusBar
         barStyle="dark-content"
         backgroundColor="#F2F2F2"
         translucent
       />
-      <WrapperMenu>
+      <S.WrapperMenu>
         <BackButton size={41} />
 
-        <Title>Minha Conta</Title>
-      </WrapperMenu>
+        <S.Title>
+          Minha Conta
+        </S.Title>
+      </S.WrapperMenu>
 
-      <WrapperProfile>
-        <WrapperHeader>
-          <Image
+      <S.WrapperProfile>
+        <S.WrapperHeader>
+          <S.Image
             source={image}
             resizeMode={'cover'}  
           />
-          <Name>Maria Rosa</Name>
-          <WrapperPoint>
-            <StarSvg height={26} width={26}/>
-            <PointsText>4,9 pts</PointsText>
-          </WrapperPoint>
-        </WrapperHeader>
+          <S.Name>
+            Maria Rosa
+          </S.Name>
+          <S.WrapperPoint>
+            <StarSvg
+              height={26}
+              width={26}
+            />
+            <S.PointsText>
+              4,9 pts
+            </S.PointsText>
+          </S.WrapperPoint>
+        </S.WrapperHeader>
 
-        <WrapperStatus>
-          <Performed>
-            <Count>20</Count>
-            <SubTitle>{`Pedido\nRealizado`}</SubTitle>
-          </Performed>
+        <S.WrapperStatus>
+          <S.Performed>
+            <S.Count>
+              20
+            </S.Count>
+            <S.SubTitle>
+              {`Pedido\nRealizado`}
+            </S.SubTitle>
+          </S.Performed>
 
-          <Feedback>
-            <Count>19</Count>
-            <SubTitle>{`Avaliações\nRecebidas`}</SubTitle>
-          </Feedback>
-        </WrapperStatus>
+          <S.Feedback>
+            <S.Count>
+              19
+            </S.Count>
+            <S.SubTitle>
+              {`Avaliações\nRecebidas`}
+            </S.SubTitle>
+          </S.Feedback>
+        </S.WrapperStatus>
 
-        <WrapperInfo>
-          <TitleInfo>Minha Conta</TitleInfo>
+        <S.WrapperInfo>
+          <S.TitleInfo>
+            Minha Conta
+          </S.TitleInfo>
 
-          <AcountInfoWrapper>
+          <S.AcountInfoWrapper>
             <MenuSelect title='Meus Endereços' iconActive={true}/>
             <MenuSelect title='Forma de pagamento' iconActive={true}/>
             <MenuSelect title='Editar dados' iconActive={true}/>
-          </AcountInfoWrapper>
-        </WrapperInfo>
-      </WrapperProfile>
-    </Container>
+          </S.AcountInfoWrapper>
+        </S.WrapperInfo>
+      </S.WrapperProfile>
+    </S.Container>
   )
 }

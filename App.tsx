@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { AppTabRoutes } from './src/routes/app.tab.routes';
 
 import {
   useFonts,
@@ -14,7 +13,6 @@ import {
 import AppLoading from 'expo-app-loading';
 import theme from './src/styles/theme';
 import { ThemeProvider } from 'styled-components'
-import { BarbecueSelectedStep1 } from './src/screens/BarbecueSelectedStep1';
 import { NewAddress } from './src/screens/NewAddress';
 
 export default function App() {
@@ -31,7 +29,9 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider 
+      theme={theme}
+    >
       <NavigationContainer>
         <NewAddress />
       </NavigationContainer>

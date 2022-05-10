@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  Container,
-  Title
-} from './styles';
+import * as S from './styles';
 
 interface Props {
   color: string;
@@ -12,10 +9,12 @@ interface Props {
 
 export function ActionButton({ color, title }: Props){
   return (
-    <Container
+    <S.Container
       color={color}
     >
-      <Title>{title}</Title>
-    </Container>
+      <S.Title>
+        {title}
+      </S.Title>
+    </S.Container>
   );
 }

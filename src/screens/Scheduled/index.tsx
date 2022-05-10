@@ -4,40 +4,39 @@ import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
 import { TitleButton } from '../../components/TitleButton';
 
-import {
-  Container,
-  WrapperMenu,
-  LogInfo,
-  Title,
-  SubTitle,
-  ButtonWrapper
-} from './styles';
+import * as S from './styles';
 
 export function Scheduled(){
   return (
-    <Container>
+    <S.Container>
       <StatusBar
         barStyle="dark-content"
         backgroundColor="#F2F2F2"
         translucent
       />
-      <WrapperMenu>
+      <S.WrapperMenu>
         <BackButton size={41} />
 
         <TitleButton 
           title='Programados' 
           subTitle='Anteriores'
         />
-      </WrapperMenu>
+      </S.WrapperMenu>
 
-      <LogInfo>
-        <Title>{`Você não tem nenhum\nchurrasco programado!`}</Title>
-        <SubTitle>{`Te convidamos a solicitar um\nnovo churrasco!`}</SubTitle>
-      </LogInfo>
+      <S.LogInfo>
+        <S.Title>
+          {`Você não tem nenhum\nchurrasco programado!`}
+        </S.Title>
+        <S.SubTitle>
+          {`Te convidamos a solicitar um\nnovo churrasco!`}
+        </S.SubTitle>
+      </S.LogInfo>
 
-      <ButtonWrapper>
-        <Button title='Novo Churrasco'/>
-      </ButtonWrapper>
-    </Container>
+      <S.ButtonWrapper>
+        <Button
+          title='Novo Churrasco'
+        />
+      </S.ButtonWrapper>
+    </S.Container>
   );
 }

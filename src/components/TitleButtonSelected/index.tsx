@@ -1,13 +1,11 @@
-import { Entypo } from "@expo/vector-icons";
 import React from "react";
+
+import { Entypo } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
+
+import * as S from './styles';
 import { BackButton } from "../BackButton";
 
-import {
-    Container,
-    Title,
-    IconWrapper
-} from './styles';
 
 interface IProps {
     title: string;
@@ -15,15 +13,16 @@ interface IProps {
 
 export function TitleButtonSelected({ title }: IProps) {
     const theme = useTheme()
+
     return(
-        <Container>
+        <S.Container>
             <BackButton color={theme.colors.text_light} size={46} />
 
-            <Title>{title}</Title>
+            <S.Title>{title}</S.Title>
 
-            <IconWrapper>
+            <S.IconWrapper>
                 <Entypo name="heart" size={32} color={theme.colors.text_light}/>
-            </IconWrapper>
-        </Container>
+            </S.IconWrapper>
+        </S.Container>
     )
 }

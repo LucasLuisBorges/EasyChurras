@@ -1,12 +1,7 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 
-import {
-  Container,
-  TitleWrapper,
-  Title,
-  Border
-} from './styles';
+import * as S from './styles';
 
 interface IProps extends TouchableOpacityProps {
   title: string;
@@ -14,11 +9,13 @@ interface IProps extends TouchableOpacityProps {
 
 export function Recents({ title, ...rest }: IProps){
   return (
-    <Container>
-      <TitleWrapper {...rest}>
-        <Title>{title}</Title>
-      </TitleWrapper>
-      <Border />
-    </Container>
+    <S.Container>
+      <S.TitleWrapper {...rest}>
+        <S.Title>
+          {title}
+        </S.Title>
+      </S.TitleWrapper>
+      <S.Border />
+    </S.Container>
   );
 }

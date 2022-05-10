@@ -1,10 +1,6 @@
 import React from 'react';
 
-import {
-  TitleWrapper,
-  ProfessionalsTitle,
-  SubTitle
-} from './styles';
+import * as S from './styles';
 
 interface Props {
   title: string;
@@ -13,9 +9,9 @@ interface Props {
 
 export function Title({title, subTitle} : Props){
   return (
-    <TitleWrapper>
-      <ProfessionalsTitle>{title}</ProfessionalsTitle>
-      <SubTitle>{` ${subTitle}`}</SubTitle>
-    </TitleWrapper>
+    <S.TitleWrapper>
+      <S.ProfessionalsTitle>{title}</S.ProfessionalsTitle>
+      <S.SubTitle>{` ${subTitle}`}</S.SubTitle>
+    </S.TitleWrapper>
   );
 }
