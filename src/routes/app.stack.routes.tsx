@@ -30,3 +30,5 @@ const MyStack = () => {
      </NavigationContainer>
   );
 }
+
+export {MyStack}

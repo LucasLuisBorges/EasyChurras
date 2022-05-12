@@ -45,3 +45,28 @@ export const SubTitle = styled.Text`
 export const ButtonWrapper = styled.View`
   padding: 25px 0 25px 0;
 `;
+
+export const Wrapper = styled.View`
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const ProfessionalsTitle = styled.Text`
+  
+  font-family: ${({ theme }) => theme.fonts.primary_600};
+  font-size: ${RFValue(14)}px;
+
+  text-transform: uppercase;
+`;
+
+export const SubTitleHeader = styled.Text`
+  
+  font-family: ${({ theme }) => theme.fonts.primary_600};
+  font-size: ${RFValue(14)}px;
+
+  text-transform: uppercase;
+`;
+
+export const TitleWrapper = styled.TouchableOpacity``;
+
+export const SubtitleWrapper = styled.TouchableOpacity``;

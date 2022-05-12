@@ -93,6 +93,8 @@ export function MainMenu() {
 
                 <S.Button>
                     <ActionButton
+                        colorText={theme.colors.text_light}
+                        colorBorder={theme.colors.main}
                         color={theme.colors.main}
                         title="Sair"
                     />
