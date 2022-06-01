@@ -9,7 +9,7 @@
 </p>
 
 ## This project
-An application designed to simulate a user's experience with feedback submissions
+Project developed for PMI, its objective is to connect barbecue grills with people who need the service
 
 ## 🚀 GetStart
 
