@@ -7,9 +7,9 @@ import { AntDesign } from "@expo/vector-icons";
 import * as S from './styles'
 import { useTheme } from "styled-components";
 
-import { HeaderComp } from "../../components/HeaderComp";
+import { HeaderComp } from "./content/HeaderComp";
 
-export function BarbecueSelectedStep1() {
+export function BarbecueSelected() {
     const theme = useTheme();
 
     return (

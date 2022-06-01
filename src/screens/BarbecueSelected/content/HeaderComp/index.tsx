@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleButtonSelected } from "../TitleButtonSelected";
+import { TitleButtonSelected } from "../../../../components/TitleButtonSelected";
 
 import * as S from './styled'
 

@@ -125,7 +125,7 @@ export const TitleInfo = styled.Text`
   padding: 33px 0 33px 0;
 `;
 
-export const AcountInfoWrapper = styled.View`
+export const AccountInfoWrapper = styled.View`
   width: 80%;
   align-self: center;
 `;

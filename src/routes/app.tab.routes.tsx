@@ -6,11 +6,13 @@ import { Platform } from "react-native";
 
 import { Home } from '../../src/screens/Home';
 import { Scheduled } from '../../src/screens/Scheduled';
-import { MyAcount } from '../../src/screens/MyAcount';
+import { MyAccount } from '../screens/MyAccount';
 
 import HomeSvg from '../assets/home.svg';
 import PeopleSvg from '../assets/people.svg';
 import LogoSvg from '../assets/logo.svg';
+
+import { AppStackRoutes } from "./app.stack.routes";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -32,7 +34,7 @@ export function AppTabRoutes() {
     >
       <Screen
         name="Home"
-        component={Home}
+        component={AppStackRoutes}
         options={{
           tabBarIcon: (({ color }) => (
             <HomeSvg width={30} height={30} fill={color} />
@@ -50,7 +52,7 @@ export function AppTabRoutes() {
       />
       <Screen
         name="Profile"
-        component={MyAcount}
+        component={MyAccount}
         options={{
           tabBarIcon: (({ color }) => (
             <PeopleSvg width={30} height={30} fill={color} />

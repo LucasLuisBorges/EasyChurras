@@ -2,33 +2,34 @@ import React, { useState } from "react";
 import { StatusBar } from "react-native";
 import { BackButton } from "../../components/BackButton";
 import { Button } from "../../components/Button";
-import { StyleSheet } from 'react-native';
 
 import * as S from "./styles";
+import theme from "../../styles/theme";
+import { PreviousCard } from "./PreviousCard";
 
 export function Scheduled() {
   const [programmed, setProgrammed] = useState(true);
-  const [previous, setPrevious] = useState(false)
+  const [previous, setPrevious] = useState(false);
 
   function TitleClickStyle() {
-    if(programmed === false) {
+    if (programmed === false) {
       setProgrammed(true);
       setPrevious(false);
     }
   }
 
   function SubTitleClickStyle() {
-    if(previous === false) {
+    if (previous === false) {
       setPrevious(true);
       setProgrammed(false);
     }
   }
-  
+
   return (
     <S.Container>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor="#F2F2F2"
+        backgroundColor="#FFFFFF"
         translucent
       />
       <S.WrapperMenu>
@@ -37,15 +38,21 @@ export function Scheduled() {
         <S.Wrapper>
           <S.TitleWrapper onPress={TitleClickStyle}>
             <S.ProfessionalsTitle
-              style={programmed ? styles.text2 : styles.text1}
+              textColor={
+                programmed ? theme.colors.text : theme.colors.textOpacity
+              }
             >
               Programados
             </S.ProfessionalsTitle>
           </S.TitleWrapper>
 
           <S.SubtitleWrapper onPress={SubTitleClickStyle}>
-            <S.SubTitleHeader style={programmed ? styles.text1 : styles.text2}>
-              {`    ${'Anteriores'}`}
+            <S.SubTitleHeader
+              textColor={
+                programmed ? theme.colors.textOpacity : theme.colors.text
+              }
+            >
+              {`    ${"Anteriores"}`}
             </S.SubTitleHeader>
           </S.SubtitleWrapper>
         </S.Wrapper>
@@ -53,20 +60,19 @@ export function Scheduled() {
 
       {programmed ? (
         <S.LogInfo>
-        <S.Title>
-          {`Você não tem nenhum\nchurrasco programado!`}
-        </S.Title>
-        <S.SubTitle>
-          {`Te convidamos a solicitar um\nnovo churrasco!`}
-        </S.SubTitle>
-      </S.LogInfo>
+          <S.Title>{`Você não tem nenhum\nchurrasco programado!`}</S.Title>
+          <S.SubTitle>
+            {`Te convidamos a solicitar um\nnovo churrasco!`}
+          </S.SubTitle>
+        </S.LogInfo>
       ) : (
-        <S.SubTitle>
-          {`Nada para ver aqui!`}
-        </S.SubTitle>
-      )
-
-      }
+        <S.WrapperCard>
+          <PreviousCard
+            title="Churrasco da familia"
+            date="25/05/2022"
+          />
+        </S.WrapperCard>
+      )}
 
       <S.ButtonWrapper>
         <Button title="Novo Churrasco" />
@@ -74,12 +80,3 @@ export function Scheduled() {
     </S.Container>
   );
 }
-
-const styles = StyleSheet.create({
-  text1: {
-    color: '#a6a6a6',
-  },
-  text2: {
-    color: '#232323',
-  }
-})

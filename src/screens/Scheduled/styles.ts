@@ -2,13 +2,13 @@ import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
 
+interface IProps {
+  textColor: string;
+}
+
 export const Container = styled.View`
-  flex: 1;
-
+  height: 100%;
   margin-top: ${getStatusBarHeight() + 0}px;
-
-  flex-direction: column;
-  justify-content: space-between;
 `;
 
 export const WrapperMenu = styled.View`
@@ -24,6 +24,8 @@ export const LogInfo = styled.View`
 
   align-items: center;
   justify-content: space-between;
+
+  margin: auto;
 `;
 
 export const Title = styled.Text`
@@ -43,7 +45,11 @@ export const SubTitle = styled.Text`
 `;
 
 export const ButtonWrapper = styled.View`
-  padding: 25px 0 25px 0;
+  position: absolute;
+  bottom: 0;
+  padding: 25px 0 50px 0;
+
+  align-self: center;
 `;
 
 export const Wrapper = styled.View`
@@ -51,20 +57,30 @@ export const Wrapper = styled.View`
   flex-direction: row;
 `;
 
-export const ProfessionalsTitle = styled.Text`
-  
-  font-family: ${({ theme }) => theme.fonts.primary_600};
-  font-size: ${RFValue(14)}px;
+export const WrapperCard = styled.View`
+  align-self: center;
 
-  text-transform: uppercase;
+  margin-top: 15px;
 `;
 
-export const SubTitleHeader = styled.Text`
+export const ProfessionalsTitle = styled.Text<IProps>`
   
   font-family: ${({ theme }) => theme.fonts.primary_600};
   font-size: ${RFValue(14)}px;
 
   text-transform: uppercase;
+
+  color: ${({ textColor }) => textColor}
+`;
+
+export const SubTitleHeader = styled.Text<IProps>`
+  
+  font-family: ${({ theme }) => theme.fonts.primary_600};
+  font-size: ${RFValue(14)}px;
+
+  text-transform: uppercase;
+
+  color: ${({ textColor }) => textColor}
 `;
 
 export const TitleWrapper = styled.TouchableOpacity``;

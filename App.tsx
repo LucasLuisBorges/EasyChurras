@@ -14,6 +14,9 @@ import AppLoading from 'expo-app-loading';
 import theme from './src/styles/theme';
 import { ThemeProvider } from 'styled-components'
 import { NewAddress } from './src/screens/NewAddress';
+import { Scheduled } from './src/screens/Scheduled';
+import { Home } from './src/screens/Home';
+import { AppTabRoutes } from './src/routes/app.tab.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,7 +36,7 @@ export default function App() {
       theme={theme}
     >
       <NavigationContainer>
-        <NewAddress />
+        <AppTabRoutes />
       </NavigationContainer>
     </ThemeProvider>
   )

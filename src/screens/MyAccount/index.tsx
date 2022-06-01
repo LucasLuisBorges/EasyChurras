@@ -7,7 +7,7 @@ import StarSvg from '../../assets/star.svg';
 import * as S from './styles'
 import { MenuSelect } from '../../components/MenuSelect';
 
-export function MyAcount() {
+export function MyAccount() {
   const image = { uri: 'https://jpimg.com.br/uploads/2022/02/design-sem-nome-2022-02-08t091532.650.jpg' }
   return (
     <S.Container>
@@ -69,11 +69,11 @@ export function MyAcount() {
             Minha Conta
           </S.TitleInfo>
 
-          <S.AcountInfoWrapper>
+          <S.AccountInfoWrapper>
             <MenuSelect title='Meus Endereços' iconActive={true}/>
             <MenuSelect title='Forma de pagamento' iconActive={true}/>
             <MenuSelect title='Editar dados' iconActive={true}/>
-          </S.AcountInfoWrapper>
+          </S.AccountInfoWrapper>
         </S.WrapperInfo>
       </S.WrapperProfile>
     </S.Container>
