@@ -6,10 +6,16 @@ import { Button } from "../../components/Button";
 import * as S from "./styles";
 import theme from "../../styles/theme";
 import { PreviousCard } from "./PreviousCard";
+import { useNavigation } from "@react-navigation/native";
 
 export function Scheduled() {
   const [programmed, setProgrammed] = useState(true);
   const [previous, setPrevious] = useState(false);
+  const navigation = useNavigation();
+
+  function handleBack() {
+    navigation.goBack();
+  }
 
   function TitleClickStyle() {
     if (programmed === false) {
@@ -29,11 +35,11 @@ export function Scheduled() {
     <S.Container>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor="#FFFFFF"
+        backgroundColor="transparent"
         translucent
       />
       <S.WrapperMenu>
-        <BackButton size={41} />
+        <BackButton size={41} onPress={handleBack}/>
 
         <S.Wrapper>
           <S.TitleWrapper onPress={TitleClickStyle}>
@@ -67,10 +73,7 @@ export function Scheduled() {
         </S.LogInfo>
       ) : (
         <S.WrapperCard>
-          <PreviousCard
-            title="Churrasco da familia"
-            date="25/05/2022"
-          />
+          <PreviousCard title="Churrasco da familia" date="25/05/2022" />
         </S.WrapperCard>
       )}
 

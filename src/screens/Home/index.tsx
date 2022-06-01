@@ -1,58 +1,53 @@
-import React from 'react'
-import { ScrollView, StatusBar } from 'react-native'
+import React from "react";
+import { ScrollView, StatusBar } from "react-native";
 
-import { ProfessionalsCard } from '../../components/ProfessionalsCard'
-import { Title } from '../../components/Title'
-import { BarbecueCard } from '../../components/BarbecueCard'
+import { ProfessionalsCard } from "../../components/ProfessionalsCard";
+import { Title } from "../../components/Title";
+import { BarbecueCard } from "../../components/BarbecueCard";
 
-import * as S from './styles'
+import * as S from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
   const image = {
-    uri: 'https://s2.glbimg.com/nuTa0sOZZ-hoALspr80pbseh5-s=/0x0:2000x1333/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/e/O/FcOCQqScGCmqLBxcssww/condor-12.jpg'
+    uri: "https://s2.glbimg.com/nuTa0sOZZ-hoALspr80pbseh5-s=/0x0:2000x1333/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/e/O/FcOCQqScGCmqLBxcssww/condor-12.jpg",
+  };
+
+  const navigation = useNavigation()
+
+  function handleNavigation() {
+    navigation.navigate('MyAccount');
   }
+
   return (
     <S.Container>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <StatusBar
           barStyle="light-content"
           backgroundColor="transparent"
           translucent
         />
-        <S.Header 
-          source={image}
-          resizeMode={'cover'}
-        >
-          <S.SearchInput
-            placeholder="Que tipo de churrasco você quer?"
-          />
-          <S.TitleHeader>
-            VENHA PARA O MUNDO{'\n'}DO CHURRASCO!
-          </S.TitleHeader>
+        <S.Header source={image} resizeMode={"cover"}>
+          <S.SearchInput placeholder="Que tipo de churrasco você quer?" />
+          <S.TitleHeader>VENHA PARA O MUNDO{"\n"}DO CHURRASCO!</S.TitleHeader>
         </S.Header>
 
         <S.ProfessionalsWrapper>
-          <Title 
-            title="Profissionais"
-            subTitle="perto de você"
-          />
+          <Title title="Profissionais" subTitle="perto de você" />
 
           <S.CardWrapper horizontal>
             <ProfessionalsCard
-              distace="3,4 km"
+              distance="3,4 km"
               name="Paulo Vieira"
               type="Churrasco Gaúcho"
             />
             <ProfessionalsCard
-              distace="2,8 km"
+              distance="2,8 km"
               name="Marcos Silva"
               type="Churrasco vegano"
             />
-
             <ProfessionalsCard
-              distace="2,8 km"
+              distance="2,8 km"
               name="Marcos Silva"
               type="Churrasco vegano"
             />
@@ -60,23 +55,17 @@ export function Home() {
         </S.ProfessionalsWrapper>
 
         <S.BarbecueWrapper>
-          <Title 
-            title="o mundo do"
-            subTitle="Churrasco"
-          />
+          <Title title="o mundo do" subTitle="Churrasco" />
 
           <S.CardWrapper horizontal>
-            <BarbecueCard title="Brasileiro" />
+            <BarbecueCard title="Brasileiro" onPress={handleNavigation} />
             <BarbecueCard title="Brasileiro" />
             <BarbecueCard title="Brasileiro" />
           </S.CardWrapper>
         </S.BarbecueWrapper>
 
         <S.BeefWrapper>
-          <Title 
-            title="O mundo das"
-            subTitle="carnes"
-          />
+          <Title title="O mundo das" subTitle="carnes" />
 
           <S.CardWrapper horizontal>
             <BarbecueCard title="Picanha" />
@@ -86,5 +75,5 @@ export function Home() {
         </S.BeefWrapper>
       </ScrollView>
     </S.Container>
-  )
+  );
 }

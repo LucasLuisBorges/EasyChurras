@@ -11,12 +11,29 @@ import { NewBarbecue } from "../screens/NewBarbecue";
 import { Scheduled } from "../screens/Scheduled";
 import { BarbecueSelected } from "../screens/BarbecueSelected";
 
+export type AppRoutes = {
+  Home: undefined;
+  MainMenu: undefined;
+  MyAccount: undefined;
+  BarbecueComplete: undefined;
+  NewAddress: undefined;
+  NewBarbecue: undefined;
+  Scheduled: undefined;
+  BarbecueSelected: undefined;
+};
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends AppRoutes {}
+  }
+}
+
 const { Navigator, Screen } = createNativeStackNavigator();
 
 export function AppStackRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }} initialRouteName="Inicio">
-      <Screen name="Inicio" component={Home} />
+    <Navigator screenOptions={{ headerShown: false }} initialRouteName="Start">
+      <Screen name="Start" component={Home} />
       <Screen name="MainMenu" component={MainMenu} />
       <Screen name="MyAccount" component={MyAccount} />
       <Screen name="BarbecueComplete" component={BarbecueComplete} />

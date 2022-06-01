@@ -1,5 +1,4 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React from "react";
 
 import {
   useFonts,
@@ -7,16 +6,13 @@ import {
   Montserrat_500Medium,
   Montserrat_600SemiBold,
   Montserrat_700Bold,
-  Montserrat_300Light
-} from '@expo-google-fonts/montserrat'
+  Montserrat_300Light,
+} from "@expo-google-fonts/montserrat";
 
-import AppLoading from 'expo-app-loading';
-import theme from './src/styles/theme';
-import { ThemeProvider } from 'styled-components'
-import { NewAddress } from './src/screens/NewAddress';
-import { Scheduled } from './src/screens/Scheduled';
-import { Home } from './src/screens/Home';
-import { AppTabRoutes } from './src/routes/app.tab.routes';
+import AppLoading from "expo-app-loading";
+import theme from "./src/styles/theme";
+import { ThemeProvider } from "styled-components";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,20 +20,16 @@ export default function App() {
     Montserrat_500Medium,
     Montserrat_600SemiBold,
     Montserrat_700Bold,
-    Montserrat_300Light
+    Montserrat_300Light,
   });
 
-  if(!fontsLoaded) {
-    return <AppLoading />
+  if (!fontsLoaded) {
+    return <AppLoading />;
   }
 
   return (
-    <ThemeProvider 
-      theme={theme}
-    >
-      <NavigationContainer>
-        <AppTabRoutes />
-      </NavigationContainer>
+    <ThemeProvider theme={theme}>
+        <Routes />
     </ThemeProvider>
-  )
+  );
 }

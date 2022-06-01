@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StatusBar } from 'react-native'
 import { ActionButton } from '../../components/ActionButton'
@@ -10,6 +11,12 @@ import { InputSmall } from './content/InputSmall'
 import * as S from './styles'
 
 export function NewAddress() {
+  const navigation = useNavigation();
+
+  function handleBack() {
+    navigation.goBack();
+  }
+  
   return (
     <S.Container>
       <StatusBar
@@ -18,7 +25,7 @@ export function NewAddress() {
         translucent
       />
       <S.WrapperMenu>
-        <BackButton size={41} />
+        <BackButton size={41} onPress={handleBack}/>
 
         <S.Title>
           Novo Endereço

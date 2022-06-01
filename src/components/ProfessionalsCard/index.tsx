@@ -8,11 +8,11 @@ import * as S from './styles';
 
 interface Props extends TouchableOpacityProps {
   name: string;
-  distace: string;
+  distance: string;
   type: string
 }
 
-export function ProfessionalsCard({ name, distace, type, ...rest } : Props){
+export function ProfessionalsCard({ name, distance, type, ...rest } : Props){
   return (
     <S.Container {...rest}>
       <S.WrapperImage>
@@ -23,7 +23,7 @@ export function ProfessionalsCard({ name, distace, type, ...rest } : Props){
       </S.WrapperImage>
       <S.WrapperDetail>
         <S.Distance>
-          {distace}
+          {distance}
         </S.Distance>
         <S.Name>
           {name}

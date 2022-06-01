@@ -10,7 +10,7 @@ interface IProps {
 export function BackInput({ text }: IProps){
   return (
     <S.Container>
-      <BackButton size={41}/>
+      <BackButton size={41} />
 
       <S.InputArea placeholder={text}/>
     </S.Container>
