@@ -19,11 +19,15 @@ export function MyAccount() {
     navigation.goBack();
   }
 
+  function handleNavigation() {
+    navigation.navigate('NewAddress');
+  }
+
   return (
     <S.Container>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor="transparent"
+        backgroundColor="#f2f2f2"
         translucent
       />
       <S.WrapperMenu>
@@ -58,7 +62,7 @@ export function MyAccount() {
           <S.TitleInfo>Minha Conta</S.TitleInfo>
 
           <S.AccountInfoWrapper>
-            <MenuSelect title="Meus Endereços" iconActive={true} />
+            <MenuSelect title="Meus Endereços" iconActive={true} onPress={handleNavigation}/>
             <MenuSelect title="Forma de pagamento" iconActive={true} />
             <MenuSelect title="Editar dados" iconActive={true} />
           </S.AccountInfoWrapper>

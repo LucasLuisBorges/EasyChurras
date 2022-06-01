@@ -13,6 +13,14 @@ export function Scheduled() {
   const [previous, setPrevious] = useState(false);
   const navigation = useNavigation();
 
+  function handleNavigation() {
+    navigation.navigate("BarbecueSelected");
+  }
+
+  function handleNavigationComplete() {
+    navigation.navigate("BarbecueComplete");
+  }
+
   function handleBack() {
     navigation.goBack();
   }
@@ -39,7 +47,7 @@ export function Scheduled() {
         translucent
       />
       <S.WrapperMenu>
-        <BackButton size={41} onPress={handleBack}/>
+        <BackButton size={41} onPress={handleBack} />
 
         <S.Wrapper>
           <S.TitleWrapper onPress={TitleClickStyle}>
@@ -73,12 +81,16 @@ export function Scheduled() {
         </S.LogInfo>
       ) : (
         <S.WrapperCard>
-          <PreviousCard title="Churrasco da familia" date="25/05/2022" />
+          <PreviousCard
+            title="Churrasco da familia"
+            date="25/05/2022"
+            onPress={handleNavigationComplete}
+          />
         </S.WrapperCard>
       )}
 
       <S.ButtonWrapper>
-        <Button title="Novo Churrasco" />
+        <Button title="Novo Churrasco" onPress={handleNavigation} />
       </S.ButtonWrapper>
     </S.Container>
   );

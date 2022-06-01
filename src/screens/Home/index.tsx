@@ -16,7 +16,7 @@ export function Home() {
   const navigation = useNavigation()
 
   function handleNavigation() {
-    navigation.navigate('MyAccount');
+    navigation.navigate('BarbecueSelected');
   }
 
   return (
